@@ -29,13 +29,13 @@ This website helps students easily explore various medical diploma and degree pr
 
 👩‍💻 Built By
 
-Created with ❤️ by [Rina0228]
+Created with ❤️ by(rina0228)
 📍 Based in Maharashtra
 🌐 Passionate about Web Design, Learning & Growth!
 
 🔗 Live Website
 
-👉 Click here to view the site
+👉 Click here to view the site(https://rina0228.github.io/New-repo/)
 
 📧 Contact
 
