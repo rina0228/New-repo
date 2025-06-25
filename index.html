@@ -1,0 +1,854 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddhi Institute - Paramedical Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e0f7fa;
+      color: #004d80;
+    }
+    header {
+      background-color: #004d80;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      }
+      
+      @keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animated-heading {
+  animation: fadeSlideIn 1.2s ease-out forwards;
+  opacity: 0; /* Starting opacity */
+}
+       .tagline {
+      font-size: 1.2rem;
+      color: #00acc1;
+    }
+    .form-section, .courses-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .form-section input, .form-section select {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #b2ebf2;
+      border-radius: 5px;
+    }
+    .form-section button {
+      padding: 10px 20px;
+      background-color: #00acc1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .course-card {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 500px;
+      border-left: 8px solid #00acc1;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    .course-card h3 {
+      margin-top: 0;
+      color: #004d80;
+    }
+    .course-card p {
+      color: #333;
+    }
+    .course-card .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #00acc1;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    
+
+.apply-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.apply-box input,
+.apply-box select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.apply-box button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  background-color: #00bcd4;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.apply-box button:hover {
+  background-color: #0097a7;
+}
+.city-campus {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #e0f7fa;
+}
+
+.city-campus h2 {
+  color: #004d80;
+  margin-bottom: 30px;
+}
+
+.city-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.city-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.city-card:hover {
+  transform: scale(1.05);
+}
+
+.city-card i {
+  font-size: 30px;
+  color: #00acc1;
+  margin-bottom: 10px;
+}
+
+.city-card p {
+  font-weight: 600;
+  color: #004d80;
+  margin: 0;
+}
+.why-choose, .courses-offered {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0faff;
+}
+
+.why-choose h2, .courses-offered h2 {
+  color: #004d80;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.why-card {
+  background: white;
+  padding: 20px;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  color: #004d80;
+}
+
+.why-card i {
+  font-size: 30px;
+  color: #00acc1;
+  margin-bottom: 10px;
+}
+
+.course-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: #004d80;
+}
+
+.course-list li {
+  background: white;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.note-line {
+  font-size: 15px;
+  color: #007c91;
+  margin-top: 20px;
+  font-style: italic;
+}
+.why-love {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0faff;
+}
+
+.why-love h2 {
+  font-size: 28px;
+  color: #004d80;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-grid img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+.why-text {
+  max-width: 700px;
+  margin: 25px auto 0;
+  font-size: 17px;
+  color: #004d80;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.contact-section {
+  padding: 50px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #004d80;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-info {
+  max-width: 300px;
+  text-align: left;
+  font-size: 16px;
+  color: #004d80;
+}
+
+.contact-info i {
+  color: #00acc1;
+  margin-right: 8px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.contact-form button {
+  background-color: #00acc1;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #007c91;
+}
+.whatsapp-btn {
+  display: inline-block;
+  margin: 30px auto 0;
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn i {
+  margin-right: 8px;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1da851;
+}
+
+/* 🟢 To center it inside any container */
+.contact-section {
+  text-align: center;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80
+  }
+  .testimonials {
+  background-color: #e6f7ff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #004d40;
+  font-weight: 700;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  text-align: left;
+  font-size: 15px;
+  position: relative;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.testimonial h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00796b;
+}
+
+.testimonial span {
+  font-size: 13px;
+  color: #555;
+}
+.map-section {
+  padding: 40px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 26px;
+  color: #004d80;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.footer {
+  background-color: #004d40;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00acc1;
+}
+
+.apply-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #00acc1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #007c91;
+}
+.apply-section {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.apply-section h2 {
+  font-size: 26px;
+  color: #004d40;
+  margin-bottom: 30px;
+}
+
+.apply-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.apply-form input,
+.apply-form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.apply-form button {
+  background-color: #00acc1;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.apply-form button:hover {
+  background-color: #007c91;
+}
+.assured-section {
+  background-color: #e0f7fa;
+  padding: 30px 20px;
+  text-align: center;
+  color: #004d40;
+}
+
+.assured-section h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.assured-section p {
+  font-size: 16px;
+  font-weight: 500;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="animated-heading">Siddhi Institute - Paramedical Courses</h1>
+    <p class="tagline">Empowering Future Healthcare Heroes</p>
+  </header>  <section class="form-section">
+    <h2>Admissions Open</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <select required>
+        <option value="">Select Course</option>
+        <option value="anm">ANM</option>
+        <option value="dmlt">DMLT</option>
+        <option value="dialysis">Dialysis Technician</option>
+        <option value="dmlt_corr">DMLT Correspondence</option>
+        <option value="ot">OT Technician</option>
+        <option value="health_ed">Health Education</option>
+        <option value="dron">DRON</option>
+      </select>
+      <button type="submit">Apply Now</button>
+    </form>
+  </section>  <section class="courses-section">
+    <h2>Our Courses</h2><div class="course-card">
+  <h3>ANM (Auxiliary Nurse Midwifery)</h3>
+  <p>Duration: 2 Years</p>
+  <p>Trains students in nursing care and maternal health.</p>
+  <a href="#" class="btn">Download Brochure</a>
+</div>
+
+<div class="course-card">
+  <h3>DMLT (Diploma in Medical Lab Technology)</h3>
+  <p>Duration: 2 Years</p>
+  <p>Study lab diagnostics, pathology, and lab management.</p>
+  <a href="#" class="btn">Download Brochure</a>
+</div>
+
+<div class="course-card">
+  <h3>Dialysis Technician</h3>
+  <p>Duration: 1 Year</p>
+  <p>Train for kidney dialysis machine operation in hospitals.</p>
+  <a href="#" class="btn">Download Brochure</a>
+</div>
+
+<div class="course-card">
+  <h3>DMLT Correspondence</h3>
+  <p>Duration: Flexible</p>
+  <p>Remote option for DMLT with same certification benefits.</p>
+  <a href="#" class="btn">Download Brochure</a>
+</div>
+
+<div class="course-card">
+  <h3>OT Technician</h3>
+  <p>Duration: 1.5 Years</p>
+  <p>Assist surgeons and manage operation theatre setups.</p>
+  <a href="#" class="btn">Download Brochure</a>
+</div>
+
+<div class="course-card">
+  <h3>Health Education</h3>
+  <p>Duration: 1 Year</p>
+  <p>Community health education and awareness training.</p>
+  <a href="#" class="btn">Download Brochure</a>
+</div>
+
+<div class="course-card">
+  <h3>DRON</h3>
+  <p>Duration: TBD</p>
+  <p>Specialized healthcare course (details to be confirmed).</p>
+  <a href="#" class="btn">Download Brochure</a>
+</div>
+
+  </section>
+  <div class="apply-box">
+  <h2>Apply Now</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+
+    <select required>
+      <option value="">Select Course</option>
+      <option value="anm">ANM</option>
+      <option value="dmlt">DMLT</option>
+      <option value="dialysis">Dialysis Technician</option>
+      <option value="dmlt_corr">DMLT Correspondence</option>
+      <option value="ot">OT Technician</option>
+      <option value="health_ed">Health Education</option>
+      <option value="dron">DRON</option>
+    </select>
+
+    <select required>
+      <option value="">Select City</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="nashik">Nashik</option>
+      <option value="pune">Pune</option>
+      <option value="Ahilyanagar">Ahilyanagar</option>
+      <option value ="nagpur">Nagpur</option>
+      <option value ="Sambhaji nagar"
+      >Sambhaji Nagar </option>
+      
+      <!-- add more -->
+    </select>
+
+    <button type="submit">Apply Now</button>
+  </form>
+  <section class="city-campus">
+  <h2>Our Maharashtra Campuses</h2>
+  <div class="city-grid">
+    <div class="city-card">
+      <i class="fas fa-hospital-alt"></i>
+      <p>Mumbai</p>
+    </div>
+    <div class="city-card">
+      <i class="fas fa-hospital-alt"></i>
+      <p>Pune</p>
+    </div>
+    <div class="city-card">
+      <i class="fas fa-hospital-alt"></i>
+      <p>Nashik</p>
+    </div>
+    <div class="city-card">
+      <i class="fas fa-hospital-alt"></i>
+      <p>Ahmednagar</p>
+    </div>
+    <div class="city-card">
+      <i class="fas fa-hospital-alt"></i>
+      <p>Shirdi</p>
+    </div>
+    <div class="city-card">
+      <i class="fas fa-hospital-alt"></i>
+     <p>Aurangabad</p>
+      </div>
+     
+    
+  </div>
+</section>
+</div>
+<section class="why-choose">
+  <h2>Why Choose Us?</h2>
+  
+  <div class="why-grid">
+    <div class="why-card">
+      <i class="fas fa-user-md"></i>
+      <p>Experienced Faculty</p>
+    </div>
+    <div class="why-card">
+      <i class="fas fa-briefcase-medical"></i>
+      <p>100% Placement Support</p>
+    </div>
+    <div class="why-card">
+      <i class="fas fa-laptop-code"></i>
+      <p>Online & Offline Learning</p>
+    </div>
+    <div class="why-card">
+      <i class="fas fa-certificate"></i>
+      <p>Govt. Approved Courses</p>
+    </div>
+  </div>
+</section>
+
+<section class="courses-offered">
+  <h2>Courses Offered</h2>
+  <p class="note-line">Explore more diploma and degree programs designed for aspiring medical professionals.</p>
+  <ul class="course-list">
+    <li>ANM (Auxiliary Nursing Midwifery)</li>
+    <li>DMLT (Diploma in Medical Lab Tech)</li>
+    <li>Dialysis Technician</li>
+    <li>DMLT Correspondence</li>
+    <li>Operation Theatre (OT Technician)</li>
+    <li>Health Education</li>
+    <li>DRON (Diploma in Radiology)</li>
+  </ul>
+</section>
+  <section class="why-love">
+  <h2>Why Students Love Siddhi Paramedical Institute</h2>
+  <div class="image-grid">
+    <img src="sidhi.jpg" alt="Campus Photo">
+    <img src="sidhi2.jpg" alt="Classroom Session">
+    <img src="sidhi5.jpg" alt="Lab Training">
+    <img src="sidhi1.jpg" alt="Student Activity">
+  </div>
+  <p class="why-text">
+  At Siddhi Paramedical Institute, we believe in empowering students with hands-on experience, real hospital exposure, and caring mentorship. Our modern labs, experienced faculty, and career support make students feel confident and career-ready from Day 1.  
+  That’s why hundreds of medical aspirants choose us every year — with love and trust. 💙
+</p>
+</section>
+  <section class="contact-section">
+  <h2>Contact Us</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> ward No-7 Belapur Road Shrirampur, Taluka -Shrirampur Dist Ahmednagar</p>
+      <p><i class="fas fa-phone-alt"></i> +91 9876543210</p>
+      <p><i class="fas fa-envelope"></i> siddhiinstitute@gmail.com</p>
+    </div>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Your Phone Number" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+<a href="https://wa.me/7083754197" target="_blank" class="whatsapp-btn">
+  <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+</a>
+<div id="thankYouPopup" class="popup">
+  <div class="popup-content">
+    <p>✅ Thank you! We’ve received your message.<br>Our team will contact you soon.</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+<section class="testimonials">
+  <h2>Why Students Love Siddhi Institute</h2>
+  <div class="testimonial-cards">
+
+    <div class="testimonial">
+      <p>“Before joining Siddhi Institute, I had no idea where to start. Now, I’m working in a reputed hospital!”</p>
+      <div class ="stars">
+      <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i></div>
+      <h4>Priya Sharma</h4>
+      <span>GNM Student</span>
+    </div>
+
+    <div class="testimonial">
+      <p>“The teachers are very supportive. The practical training helped me a lot.”</p>
+      <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    </div>
+      <h4>Rohit Patil</h4>
+      <span>OT Technician</span>
+    </div>
+
+    <div class="testimonial">
+      <p>“Affordable, professional, and the best institute for paramedical courses in Maharashtra!”</p>
+      <div class ="stars">
+      <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i></div>
+      <h4>Sneha Jadhav</h4>
+      <span>DMLT Correspondence</span>
+    </div>
+    <div class="testimonial">
+      <p>“My experience at Siddhi Paramedical Institute was exceptional. The institute boasts multiple facilities, including state-of-the-art labs, comprehensive libraries, and interactive classrooms. The faculty is highly skilled and supportive, enhancing the learning environment. Additionally, the hands-on training and workshops prepare students effectively for real-world challenges in paramedical fields.!”</p>
+      <div class ="stars">
+      <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i></div>
+      <h4>Rinaa mukhiya</h4>
+      <span>OT Technician</span>
+    </div>
+
+  </div>
+</section>
+<section class="map-section">
+  <h2>Our Location</h2>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.7804946907067!2d74.6354079750552!3d18.582191967154436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc3e25fc5ad8e33%3A0x43b5b56e586dc735!2sHaregaon%2C%20Maharashtra%20413209!5e0!3m2!1sen!2sin!4v1719314559772!5m2!1sen!2sin"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Siddhi Institute</h3>
+    <p>Empowering Future Healthcare Professionals</p>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <a href="#apply" class="apply-btn">Apply Now</a>
+  </div>
+</footer>
+<section id="apply" class="apply-section">
+  <h2>Apply for Admission</h2>
+  <form class="apply-form">
+    <input type="text" placeholder="Full Name" required>
+    <input type="tel" placeholder="Mobile Number" required>
+    <select required>
+      <option value="">Select Course</option>
+      <option>GNM</option>
+      <option>DMLT</option>
+      <option>DMLT correspondence</option>
+      <option>Dialysis Technician</option>
+      
+      <option>Health Education</option>
+      <option>OT Technician</option>
+      <option >dron</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+<section class="assured-section">
+  <h3>Assured by</h3>
+  <p>Certified Paramedical Trainers & Experienced Healthcare Faculty</p>
+</section>
+</body>
+</html>
